@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 int main(void){
-  printf("输入一个性别 , 只能输入 m(男生) or f(女生)");
+  printf("输入一个性别 , 只能输入 m(男生) or f(女生)\n");
   char buf[256];
   fgets (buf , sizeof(buf) , stdin);
   char gender;
