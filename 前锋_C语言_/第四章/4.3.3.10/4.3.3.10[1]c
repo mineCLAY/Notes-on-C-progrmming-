@@ -1,0 +1,12 @@
+//位运算
+
+#include <stdio.h>
+
+int main(void){
+    int x = 8; //定义一个整型变量 x 并初始化值 8
+    printf("8 * 2 = %d , 8 * 4 = %d\n" , 8 * 2 , 8 * 4);
+        printf("x << 1 = %d , x  << 2 = %d\n" , x << 1 , x << 2);
+    printf("8 / 2 = %d , 8 / 4 = 2\n" , 8 / 2 , 8 / 4);
+        printf("x >> 1 = %d , x >> 2 = %d\n" , x >> 1 , x >> 2);
+    return 0;
+}
