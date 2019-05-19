@@ -1,3 +1,4 @@
+//01. left / right shift 编程 , 求出 8 左、右移两位的输出值
 //位运算
 
 #include <stdio.h>
