@@ -1,0 +1,26 @@
+/*
+ * 4.06. Example_sprintf.c
+ *
+ * sprintf 格式控制串可以插入各种东西
+ * 可以把几个东西连成一串
+ * "连接字符串"
+ * 所以
+ * 许多场合可以替代 strcat
+ */
+
+#include <stdio.h>
+
+int main(void) {
+
+  char str[128];
+
+  sprintf(str , "%s %s\n" , "Dear:" , "HU");
+  printf("%s\n" , str);
+
+  // sprintf 还可以一次连接多个字符串
+  sprintf(str , "%s%s%s\n" , "懒惰的人哪" ,
+          "你去察看蚂蚁的动作" , "就可得智慧！");
+  printf("%s\n" , struct);
+
+  return 0;
+}
