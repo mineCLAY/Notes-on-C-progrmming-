@@ -25,25 +25,25 @@ int main(void) {
 
     char *name = "蒙奇 .D. 路飞";
     char ch = '\n';
-    fprintf(stream, "name: %s%s", name, ch);
+    fprintf(stream , "name: %s%s" , name , ch);
 
     char sex = 'M';
-    fprintf(stream, "性别: %s\n", sex);
+    fprintf(stream , "性别: %s\n" , sex);
 
     int age = 19;
-    fprintf(stream, "年龄: %d\n", age);
+    fprintf(stream , "年龄: %d\n" , age);
 
     int height = 174;
-    fprintf(stream, "身高: %d 厘米\n", height);
+    fprintf(stream , "身高: %d 厘米\n" , height);
 
     int weight = 50;
-    fprintf(stream, "体重: %d 千克\n", weight);
+    fprintf(stream , "体重: %d 千克\n" , weight);
 
     char *apple = "橡胶果实";
-    fprintf(stream, "恶魔果实: %s\n", apple);
+    fprintf(stream , "恶魔果实: %s\n" , apple);
 
     char *won = "五亿贝利";
-    fprintf(stream, "悬赏金额: %s\n", won);
+    fprintf(stream , "悬赏金额: %s\n" , won);
 
     return 0;
 }
