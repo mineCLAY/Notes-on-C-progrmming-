@@ -16,7 +16,7 @@ int main(void) {
   printf("buf = %s\n" , buf);
   printf("pos = %d\n" , pos);
 
-  sprintf(buf , "%.100%n" , x , &pos);
+  sprintf(buf , "%.100d%n" , x , &pos);
   printf("buf = %s\n" , buf);
   printf("pos = %d\n" , pos);
 
