@@ -28,7 +28,7 @@ int main(void) {
 
   // 产生 0 ~ 100 之间的随机数 , 自然 rand() % 100
   for (int i = 0; i < 10; ++i) {
- 				// 记录 offset 可以实现累加字符串到尾部
+ 		// 记录 offset 可以实现累加字符串到尾部
     offset += sprintf(str + offset , "%d , " , rand() % 100);
   }
   // 记录 offset 的妙用 , 将最后一个逗号换成换行符
