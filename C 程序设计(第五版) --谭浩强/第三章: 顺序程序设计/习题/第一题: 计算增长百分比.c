@@ -11,9 +11,9 @@ int main(void) {
 
   double r = 0.07 , years , p , multiple;  // 定义　增长率　, 念书 , 倍数
   p = (1 + 0.07) * 10;                     // 计算现在相比的倍数
-  p = p * 100;                             // 计算增长率
+  p *= 100;                                // 计算增长率
 
-  printf("multiple = %lf%\n" , p);         // 输出增长率
+  printf("multiple = %4.0lf%\n" , p);      // 输出增长率
 
   return 0;
 }
