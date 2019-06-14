@@ -7,12 +7,12 @@
 
 int main(void) {
 
-  float f , c;
-  f = 64.0;
-  c = (5.0 / 9) * (f - 32);
+  float f , c;              // 定义 f 和 c 为单精度浮点型变量
+  f = 64.0;                 // 定义 f 的值
+  c = (5.0 / 9) * (f - 32); // 利用公式计算 c 的值
 
   printf("f = %f\nc = %f\n" , 
-          f , c);
+          f , c);           // 输出 c 的值
 
   return 0;	
 }
