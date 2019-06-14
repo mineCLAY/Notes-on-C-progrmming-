@@ -1,3 +1,7 @@
+/*
+ * Example 计算存款
+ */
+
 #include <stdio.h>
 
 int main(void) {
