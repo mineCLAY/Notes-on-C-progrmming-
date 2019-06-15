@@ -9,14 +9,14 @@
 
 int main(void) {
 
-  double upper_bottom , lower_bottom , height;
-  printf ("input upper_bottom , lower_bottom , height(unit cm):\n");
+  double upper_bottom , lower_bottom , height; // 定义 上底 下底 高
+  printf ("input upper_bottom , lower_bottom , height(unit cm):\n"); // 叫用户输入 上底 下底 高
   scanf("%lf%lf%lf" , &upper_bottom ,
-         &lower_bottom , &height);
+         &lower_bottom , &height); // 让用户输入的值存入 上底 下底 高
 
   printf("Trapezoidal area: %lf\n" ,
           (upper_bottom + lower_bottom)
-           * height / 2);
+           * height / 2); // 输出梯形的面积
 
   return 0;
 }
