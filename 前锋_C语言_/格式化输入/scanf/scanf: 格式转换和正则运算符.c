@@ -87,10 +87,16 @@ int main(void) {
   printf("pi = %lf\n" , pi);
 
   // 5.05 %s
-  printf("输入一个字符串(str):\n");
+  printf("输入 1 个字符串(str):\n");
   char *str[128];
-  scanf("%s" , &str);
-  printf("str = %s\n" , str);
+  char *s[128];
+  char *s2[128];
+  char *s3[128];
+  char *s4[128];
+  scanf("%s%s%s%s%s" , &str ,
+         &s , &s2 , &s3 , &s4);
+  printf("str = %s %s %s %s %s\n" ,
+          &str , &s , &s2 , &s3 , &s4);
 
   // 5.06 %p
 
