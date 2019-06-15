@@ -1,5 +1,9 @@
 /*
  * 5.03 Example_fscanf.c
+ *
+ * 判断用户输入的是否为整数
+ * 如果是则输出
+ * 否则提示错误
  */
 
 #include <stdio.h>
