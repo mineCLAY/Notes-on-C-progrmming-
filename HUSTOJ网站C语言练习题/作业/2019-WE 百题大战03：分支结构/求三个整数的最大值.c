@@ -8,13 +8,13 @@
 
 int main(void) {
 
-  int a , b , c , max;               // 
+  int a , b , c , max;               //  定义所需的整型变量
 
   scanf("%d %d %d" , &a ,  &b , &c); // 用户输入 3 个整数 存入变量 a b c
   if ((a > b) && (a > c)) {          // 判断 a 是否大于 b , c
     max = a;                         // 如果是 则 max = a 的值
   } else if ((b > a) && (b > c)) {   // 判断 b 是否大于 a , c
-    max = b                          // 如果是 则 max = b 的值
+    max = b;                         // 如果是 则 max = b 的值
   } else if ((c > a) && (c > b)) {   // 判断 c 是否大于 a , b
     max = c;                         // 如果是 则 max = c 的值
   }
