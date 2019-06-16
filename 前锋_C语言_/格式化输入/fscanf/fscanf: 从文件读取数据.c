@@ -14,7 +14,7 @@ int main(void) {
     fprintf(stderr , "fopen error: %s\n" , strerror(errno));
     exit(EXIT_FAILURE);
   } else {
-    fprintf(stream , "%s%ld%f%c" , "Hu" , 65000L , 3.14159 , 'x');
+    fprintf(stream , "%s%ld%f%c" , "Hu520" , 65000L , 3.14159 , 'x');
     // 将指针设置至文件开头
     fseek(stream , 0L , SEEK_SET);
 
