@@ -15,11 +15,11 @@
 
 int main(void) {
 
-    float f;
+  float f;
 
-    scanf("%f" , &f);
-    f = fabs(f);
-    printf("%.2f\n" , f);
+  scanf("%f" , &f);
+  f = fabs(f);
+  printf("%.2f\n" , f);
 
-    return 0;
+  return 0;
 }
