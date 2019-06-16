@@ -9,7 +9,7 @@
 
 int main(void) {
 
-  FILE *stream = fopen("fscanf.out" , "w");
+  FILE *stream = fopen("fscanf.out" , "w+");
   if (NULL == stream) {
     fprintf(stderr , "fopen error: %s\n" , strerror(errno));
     exit(EXIT_FAILURE);
