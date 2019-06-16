@@ -1,0 +1,18 @@
+/*
+ * 输入三个整数
+ * 输出它们的平均值
+ * 保留 3 位小数
+ */
+
+#include <stdio.h>
+
+int main(void) {
+
+  float a , b , c , add;          // 定义三个单精度浮点数
+  scanf("%f%f%f" , &a , &b , &c); // 用户输入的值分别存入变量 a , b , c
+  add = a + b + c;                // 计算三个数的和
+
+  printf("%.3f" , add / 3);       // 输出 三个数的平均数
+
+  return 0;
+}
