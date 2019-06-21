@@ -23,7 +23,7 @@ int main(void) {
   scanf("%d" , &year);
 
   int rate = payment * 12 * year - loan; // 计算利息
-  printf("贷款需要多还: %d\n" , rate);     // 输出结果: 多还的钱
+  printf("贷款需要多还: %d 元\n" , rate);     // 输出结果: 多还的钱
 
   return 0;
 }
