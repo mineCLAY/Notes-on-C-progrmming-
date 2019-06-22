@@ -1,5 +1,5 @@
 /*
- * 6.02 Exmple_getc.c
+ * 6.02 Example_getc.c
  *
  * Money counter
  */
