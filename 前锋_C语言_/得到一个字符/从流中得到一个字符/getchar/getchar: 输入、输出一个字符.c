@@ -1,5 +1,5 @@
 /*
- * 6.01 getchar.c
+ * 6.01 Example_getchar.c
  *
  * 输入、输出一个字符
  */
