@@ -2,7 +2,7 @@
  * 7.01 Example_getch.c
  *
  * A very simple example of curses programming
- * 翻译:
+ * 编译:
  * gcc 7.01 Example_getch.c -l curses
  */
 
