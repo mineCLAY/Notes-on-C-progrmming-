@@ -18,19 +18,24 @@
  *            在物理屏幕 (显示器) 上显示出来
  */
 
+#include <conio.h>
 #include <curses.h>
 
 int main(void) {
 
+  // 定义所需的变量
   char *str = "God丶HC bless you!";
   int offset = strlen(str) / 2;
 
+  // 设计页面
   initscr();
   box(stdscr , ACS_VLINE , ACS_HLINE);
   move(LINES / 2 , COLS / 2 - offse);
   waddstr(stdscr , str);
   refresh();
+  // 输入一个字符
   getch();
+  // 关闭页面
   endwin();
 
   return 0;
