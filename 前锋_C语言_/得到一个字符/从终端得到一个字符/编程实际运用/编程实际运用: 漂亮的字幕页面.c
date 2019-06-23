@@ -18,6 +18,7 @@
  *            在物理屏幕 (显示器) 上显示出来
  */
 
+#include <string.h>
 #include <conio.h>
 #include <curses.h>
 
