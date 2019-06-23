@@ -21,7 +21,7 @@
 
 int mai(void) {
 
-  initscr(0 ;
+  initscr();
   char c = getch();
   endwin();
 
