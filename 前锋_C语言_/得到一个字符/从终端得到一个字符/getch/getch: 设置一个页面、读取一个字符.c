@@ -17,6 +17,7 @@
 
 #include <stdio.h>
 #include <curses.h>
+#include <conio.h>
 
 int mai(void) {
 
