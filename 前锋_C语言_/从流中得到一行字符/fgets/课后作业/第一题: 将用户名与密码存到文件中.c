@@ -36,7 +36,7 @@ int main(void) {
   gets(password_2);
 
   // 判断两次输入的密码是否一致
-  if (password != password_2) {
+  if (password == password_2) {
     // 如果一致 则输出用户名和密码
     printf("username: %s\n" ,
             username);
@@ -71,3 +71,9 @@ int main(void) {
 
   return 0;
 }
+
+/*
+ * 太难了啊
+ * 就连判断都不会呀
+ * 有没有人能教我
+ */
