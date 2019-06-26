@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+
+  // 设置所需的变量
+  long number;
+
+  // 叫用户输入一个数
+  printf("Enter a number:\n");
+  // 将用户输入的数赋给变量 number
+  scanf("%ld" , &number);
+
+  // 开始循环
+  for (int i = 1 , n = 0; number <= i; i++) {
+    //判断 number 能不能被某数整除
+    if (0 == number % i)
+      n++;
+  }
+
+  // 如果变量 number 的值有两个因数以下
+  if (n < 2)
+    // 则输出该数是 素数
+    printf("%ld 是素数\n" , number);
+  // 否则
+  else
+    // 输出该数是 合数
+    printf("%ld 是合数\n" , number);
+
+  return 0;
+}
