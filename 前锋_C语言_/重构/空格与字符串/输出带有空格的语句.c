@@ -1,4 +1,6 @@
 /*
+ * 输出带有空格的语句(gets)
+ *
  * 11.01 String_Spaces_Original.c
  */
 
@@ -10,7 +12,7 @@ int main(void) {
   char str[128];
   // 错误 不能输出整段有空格语句
   // scanf("%s" , str);
-  gets();
+  gets(str);
   printf("%s\n");
 
   return 0;
