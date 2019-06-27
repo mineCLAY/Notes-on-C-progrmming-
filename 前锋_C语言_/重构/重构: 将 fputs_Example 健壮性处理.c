@@ -1,4 +1,6 @@
 /*
+ * 重构: 将 fputs_Example 健壮性处理
+ *
  * 11.07 Example_fputs_Refactoring.c
  */
 
