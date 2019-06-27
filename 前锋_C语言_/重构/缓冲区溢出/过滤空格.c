@@ -1,5 +1,5 @@
 /*
- * 过滤空格
+ * 过滤空格[失败]
  *
  * 11.03 Buffer_Residue_Original.c 
  */
