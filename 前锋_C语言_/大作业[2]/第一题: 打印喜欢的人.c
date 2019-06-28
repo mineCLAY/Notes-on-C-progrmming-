@@ -36,11 +36,11 @@ int main(void) {
   scanf("%*c%[^\n]" , birthday);
 
   // 身高
-  puts("Enter you height:");
+  puts("Enter you height(unit cm):");
   scanf("%*c%[^\n]" , height , height);
 
   // 体重
-  puts("Enter you weight:");
+  puts("Enter you weight(unit kg):");
   scanf("%*c%[^\n]" , weight , weight);
 
   // 爱好
@@ -49,7 +49,7 @@ int main(void) {
 
   // 定义文件流  fp
   FILE *fp;
-  fp = fopen("new.out" , "w+");
+  fp = fopen("Like.c" , "w+");
 
   // 判断是否出错
   if (NULL == fp) {
@@ -65,20 +65,27 @@ int main(void) {
 
   // 将获取的数据存入文件
   fputs(name , fp);
+  fputs("\n" , fp);
   fputs(sex , fp);
+  fputs("\n" , fp);
   fputs(age , fp);
+  fputs("\n" , fp);
   fputs(birthday , fp);
+  fputs("\n" , fp);
   fputs(height , fp);
+  fputs("\n" , fp);
   fputs(weight , fp);
+  fputs("\n" , fp);
   fputs(hobby , fp);
+  fputs("\n" , fp);
 
   // 打印到屏幕上
   printf("name: %s\n" , name);
   printf("sex: %s\n" , sex);
   printf("age: %s\n" , age);
   printf("birthday: %s\n" , birthday);
-  printf("height: %s\n" , height);
-  printf("weight: %s\n" , weight);
+  printf("height: %s cm\n" , height);
+  printf("weight: %s kg\n" , weight);
   printf("hobby: %s\n" , hobby);
 
   return 0;
