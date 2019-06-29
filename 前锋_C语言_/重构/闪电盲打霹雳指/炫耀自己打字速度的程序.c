@@ -1,4 +1,6 @@
 /*
+ * 闪电盲打霹雳指
+ *
  * 11.08 Hakcer_Coding_Original.c
  *
  * Hacker Coding
