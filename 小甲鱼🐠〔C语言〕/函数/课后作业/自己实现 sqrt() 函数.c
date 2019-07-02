@@ -12,7 +12,19 @@
 
 int main(void) {
 
-  int sqrt(int x , int y);
+  // 声明 sqrt() 函数
+  int sqrt(int x , int y); 
 
   return 0;
+}
+
+// 定义 sqrt() 函数
+int sqrt(int x , int y) {
+
+  // 声明存储结果的变量
+  int square;
+
+  
+
+  return square;
 }
