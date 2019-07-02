@@ -2,7 +2,13 @@
 
 int main(void) {
 
-  // 对被调用函数 add 的声明
+  /*
+   * 对被调用函数 add 的声明
+   * 注意:
+   * 如果将 自定义 函数
+   * 放到 main 主函数之前
+   * 可以不用再声明
+   */
   float add(float x , float y);
   // 定义所需变量
   float a , b , c;
@@ -25,7 +31,7 @@ int main(void) {
  * 函数首部
  */
 
-float add(float x , float , y) {
+float add(float x , float y) {
 
   // 函数体
   float z;
