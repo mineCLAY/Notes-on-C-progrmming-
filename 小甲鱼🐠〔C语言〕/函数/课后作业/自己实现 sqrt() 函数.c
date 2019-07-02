@@ -49,7 +49,5 @@ int sqrt(int x) {
   // 将求出的值赋给变量 square
   square = i;
 
-
   // 返回求出的值
   return square;
-}
