@@ -6,7 +6,7 @@
  * 求平均成绩)
  */
 
-#include <stdio.h.
+#include <stdio.h>
 
 int main(void) {
 
