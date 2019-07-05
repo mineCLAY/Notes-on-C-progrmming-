@@ -12,7 +12,7 @@ int f(int a) {
   // 声明动态变量 a
   auto int b = 0;
   // 声明静态变量 b
-  static int c = 0;
+  static int c = 3;
 
   // b == 1 , 1 , 1
   b += 1;
