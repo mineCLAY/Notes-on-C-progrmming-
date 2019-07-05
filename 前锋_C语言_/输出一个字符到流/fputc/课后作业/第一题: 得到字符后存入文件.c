@@ -9,11 +9,11 @@
 
 int main(void) {
 
-  // 定义文件流 HU
+  // 定义文件流 HHH
   FILE *HHH;
   HHH = fopen("fprintf.out" , "w+");
   // 将内容用 fprintf 存入文件 fprintf.out 中
-  fprintf(HHH , "Yo_this_HHH_红花会.\n");
+  fprintf(HHH , "%s" , "Yo_this_HHH_红花会.\n");
 
   // 定义文件流 fp
   FILE *fp;
@@ -22,35 +22,32 @@ int main(void) {
   // 判断是否错误
   if (NULL == fp) {
     fprintf(stderr , "fopen error: %s\n" ,
-                      strerror(errno));
+    strerror(errno));
     // 退出程序
     exit(EXIT_FAILURE);
   }
 
   // 定义存放内容的变量 str
-  int str;
+  int str[512];
   // 开始循环 读取 fprintf.out 中的内容
-  for (; 1;) {
-    str = fgetc(HHH);
+  for (int i = 0; i < 512; i++) {
+    // 一个字符一个字符地读取
+    str[i] = fgetc(HHH);
+    // 判断是否读取完成
     if (feof(HHH)) {
+      // 退出循环
       break;
     }
   }
-  // 将数据存入 fgetc.out
-  fputc(str , fp);
-  fputc('\n' , fp);
 
-  // 关闭流 HHH、fp 防止内存泄漏
-  fclose(HHH);
-  fclose(fp);
+  // 循环将数据存入 fgetc.out
+  for (int i = 0; i < 512; i++) {
+    // 一个字符一个字符地存入文件
+    fputc(str[i] , fp);
+  }
 
-  return 0;
+    // 关闭流 HHH、fp 防止内存泄漏
+    fclose(HHH);
+    fclose(fp);
+    return 0;
 }
-
-/*
- * 只能用两个函数
- * 太难了
- * 我以后做
- * 似乎很多我都没有完成耶
- * ε=(´ο｀*)))唉
- */
