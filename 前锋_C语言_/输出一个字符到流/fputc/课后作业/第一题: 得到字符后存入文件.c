@@ -12,6 +12,13 @@ int main(void) {
   // 定义文件流 HHH
   FILE *HHH;
   HHH = fopen("fprintf.out" , "w+");
+  // 判断是否错误
+  if (NULL == HHH) {
+    fprintf(stderr , "fopen error: %s\n" ,
+                      strerror(errno));
+    // 退出程序
+    exit(EXIT_FAILURE);
+  }
   // 将内容用 fprintf 存入文件 fprintf.out 中
   fprintf(HHH , "%s" , "Yo_this_HHH_红花会.\n");
 
@@ -22,7 +29,7 @@ int main(void) {
   // 判断是否错误
   if (NULL == fp) {
     fprintf(stderr , "fopen error: %s\n" ,
-    strerror(errno));
+                      strerror(errno));
     // 退出程序
     exit(EXIT_FAILURE);
   }
@@ -46,8 +53,8 @@ int main(void) {
     fputc(str[i] , fp);
   }
 
-    // 关闭流 HHH、fp 防止内存泄漏
-    fclose(HHH);
-    fclose(fp);
-    return 0;
+  // 关闭流 HHH、fp 防止内存泄漏
+  fclose(HHH);
+  fclose(fp);
+  return 0;
 }
