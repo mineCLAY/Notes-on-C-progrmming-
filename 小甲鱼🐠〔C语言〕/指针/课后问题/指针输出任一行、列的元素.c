@@ -27,9 +27,19 @@ int main(void) {
   int (*p)[6];
   p = two_array;
 
-  // 叫用户输入想列出的任意元素的值
-  puts("Enter any row , column:");
-  scanf("%d %d" , &i , &j);
+  // 用户输入想列出的任一行元素的值
+  JW: puts("Enter row(max: 6):");
+  scanf("%d" , &i);
+  // 判断是否超出数组元素范围
+  if (i > 6)
+    // 返回 JW 的步骤重新输入行
+    goto JW;
+  // 用户输入想列出的任一行元素的值
+  TF: puts("Enter column(max: 6):");
+  scanf("%d" , &j);
+  if (j > 6)
+    // 返回 TF 的步骤重新输入行
+    goto TF;
   /*
    * 因为数组是从 0 行、列开始
    * 所以用户可能会输入 3 行 3 列
