@@ -14,18 +14,18 @@
 int copy(char *string) {
 
   // 定义需要赋值的数组
-  char like[128];
+  char *like;
   // 定义循环所需变量
   int i;
 
   // 循环复制数组 string[] 中的字符串
   for (i = 0; *(string + i) != '\0'; i++) {
     // 开始复制字符串
-    like[i] = *(string + i);
+    *(like + i) = *(string + i);
   }
 
   // 将最后加上 '\0' 起到结束的作用
-  like[i] = '\0';
+  *(like + i) = '\0';
   // 输出字符串
   puts(like);
 
@@ -34,7 +34,7 @@ int copy(char *string) {
 int main(void) {
 
   // 定义存储字符串的数组
-  char string[128] = "HU , I like you.";
+  char *string = "HU , I like you.";
 
   // 调用函数
   copy(string);
