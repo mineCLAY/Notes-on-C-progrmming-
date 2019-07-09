@@ -31,13 +31,13 @@ int main(void) {
   JW: puts("Enter row(max: 6):");
   scanf("%d" , &i);
   // 判断是否超出数组元素范围
-  if (i > 6)
+  if ((i > 6) || (0 > i))
     // 返回 JW 的步骤重新输入行
     goto JW;
   // 用户输入想列出的任一行元素的值
   TF: puts("Enter column(max: 6):");
   scanf("%d" , &j);
-  if (j > 6)
+  if ((j > 6) || (0 > j))
     // 返回 TF 的步骤重新输入行
     goto TF;
   /*
