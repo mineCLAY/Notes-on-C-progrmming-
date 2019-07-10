@@ -15,10 +15,15 @@
 
 int main(void) {
 
+  // 定义文件流 stream
   FILE *stream;
+  stream = fopen("fprintf.out" , "w");
+
+  // 定义所需字符串
   char *liuyunzi = "刘韵姿" , *age = "12" , *nv = "women" , *weihun = "weihun" , *height = "165";
+  // 将数据存入文件流 fp
   fprintf(stream , " %s\n %s\n %s\n %s\n %s\n" ,
-		                 liuyunzi , age , nv , weihun , height); 
+          liuyunzi , age , nv , weihun , height); 
 
   return 0;
 }
