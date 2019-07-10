@@ -10,17 +10,14 @@
 
 int main(void) {
 
-  // 定义所需数组
-  int f1 = 1, f2 = 0;
-  int F[20] = {1 , 0 , 0};
+  // 定义所需数组 f
+  int f[2] = {0 , 1};
 
-  // 开始循环赋值
-  for (int i = 1 , j = 0; i <= 10; i++ , j++) {
-    f1 += f2;
-    f2 += f1;
-    F[j] = f1;
-    F[i] = f2;
-    printf("%d\n%d\n" , F[j] , F[i]);
+  // 开始循环输出 Fibonacci 数列
+  for (int i = 0; i < 20; i++) {
+    f[0] += f[1];
+    f[1] += f[0];
+    printf("%d %d\n" , f[0] , f[1]);
   }
 
   return 0;
