@@ -21,7 +21,7 @@ int main(void) {
   puts("Enter the value of 3 * 4 matrix:");
   // 开始循环赋值
   for (int i = 0; i <= 2; i++) {
-    for (int j = 0; i <= 3; j++) {
+    for (int j = 0; j <= 3; j++) {
       scanf("%d" , &matrix[i][j]);
 
       if (max < matrix[i][j]) {
@@ -33,8 +33,10 @@ int main(void) {
       }
     }
   }
+
+  // 输出结果
   printf("max: %d: \t(%d , %d)\n" ,
-               max , row , colum);
+               max , row + 1 , colum + 1);
 
   return 0;
 }
