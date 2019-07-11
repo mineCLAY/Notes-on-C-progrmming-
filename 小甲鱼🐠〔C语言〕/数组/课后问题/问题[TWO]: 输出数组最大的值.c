@@ -1,5 +1,5 @@
 /*
- * Problem NO.ONE
+ * Problem NO.TWO
  *
  * 有一个 3 * 4 的矩阵
  * 要求编程求出其中值
