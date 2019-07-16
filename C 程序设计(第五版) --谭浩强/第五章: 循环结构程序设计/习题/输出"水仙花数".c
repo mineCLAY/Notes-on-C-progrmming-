@@ -10,10 +10,8 @@
 
 #include <stdio.h>
 
-int main(void) {
-
-  // 定义储存三位数的变量
-  int result = 100;
+// 定义函数 daffodil()
+int daffodil(int result) {
 
   // 循环进行判断
   for (int a = 1; a <= 9; a++) {
@@ -21,12 +19,20 @@ int main(void) {
       for (int c = 0; c <= 9; result++ , c++) {
         if (result == a * a * a + b * b * b + c * c * c) {
           printf("The %d is daffodil number.\n\n" , result);
-        } else {
-          continue;
         }
       }
     }
   }
+
+}
+
+int main(void) {
+
+  // 定义储存三位数的变量
+  int result = 100;
+
+  // 调用函数 daffodil()
+  daffodil(result);
 
   return 0;
 }
