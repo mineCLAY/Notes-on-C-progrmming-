@@ -41,7 +41,7 @@ int main(void) {
   long result = factorial(n);
 
   // 输出结果
-  printf("%d\n" , result);
+  printf("%ld\n" , result);
 
   return 0;
 }
