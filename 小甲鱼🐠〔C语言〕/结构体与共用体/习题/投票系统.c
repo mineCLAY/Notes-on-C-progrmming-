@@ -7,7 +7,7 @@
  */
 
 #include <stdio.h>
-#include <>
+#include <string.h>
 
 // 定义结构体了类型 candidate
 struct candidate {
