@@ -24,6 +24,22 @@ using namespace std;
 
 int main(void) {
 
+  /*
+   * 不需要赋初值的指针
+   * 赋为 nullptr
+   * 如果不加 nullptr
+   * 它的初始值是乱的
+   * (野指针) 它会随便指向一个地址
+   */
+  // double * ptr_double;
+  double * ptr_double = nullptr;
+  // 等价于
+  // double * ptr_double = 0;
+  // 直接将指针初始化为字面常量 0
+
+  // NULL 需要包含 cstdlib 库函数
+  // double ptr_double = NULL;
+
   // 定义变量
   double pi = 3.14;
   // 声明指针指向 pi
@@ -57,8 +73,8 @@ int main(void) {
   // 定义一个指针变量指向变量 ch
   char * ptr_ch = &ch;
 
-  // 打印 a*j  a
-  cout << ptr_ch << "  " << *ptr_ch << endl;
+  // 打印字符型地址需要强制转换为 void *
+  cout << (void *)ptr_ch << "  " << *ptr_ch << endl;
 
   return 0;
 }
