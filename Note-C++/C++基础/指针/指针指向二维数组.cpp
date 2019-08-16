@@ -26,6 +26,9 @@ int main(void) {
   // 给一个数组元素赋值
   pointer[3][2] = 6666;
 
+  // 打印指向二维数组指针的字节
+  cout << sizeof(pointer) << '\n' << endl;
+
   // 循环打印
   for(int i = 0; i < 5; i++) {
 
