@@ -3,12 +3,13 @@
  * Little princess
  * develop in mind
  *
+ *
  * Create god: mine
  *   Date: 2019/8/17
- * Modify: 2019/8/18
+ * Modify: 2019/8/
  *
- * Copyright: Mine
- * © 0000 - 0000
+ * Copyright
+ * © 0000 - 0000 mine
  */
 
 #include <iostream>
@@ -19,6 +20,9 @@
 #include <ctime>
 
 using namespace std;
+
+// 声明函数
+void print(int[] , string[] , int);
 
 int main(void) {
 
@@ -43,12 +47,14 @@ int main(void) {
    * 用数组存储女主基本属性:
    * 体力、智力、魅力、道德、气质
    */
-  // int baseinfo[5];
-  array<int , 5> baseinfo;
-  // string baseinfo_name[5]
-  array<string , 5> baseinfo_name = {
+  int baseinfo[5];
+  // array<int , 5> baseinfo;
+  string baseinfo_name[5] = {
     "体力" , "智力" , "魅力" , "道德" , "气质"
   };
+  // array<string , 5> baseinfo_name = {
+  //  "体力" , "智力" , "魅力" , "道德" , "气质"
+  // };
 
   // 定义女主的体力
   // int p_strength = 0;
@@ -364,101 +370,76 @@ int main(void) {
 
       }
 
-      // do ...... while 循环控制选项 1
-      do {
-        // 告诉用户行程
-        cout << "\n1. 查看状态\n2.  安排行程\n3. 谈话" << endl;
-        // 叫用户选择
-        cout << "What do you do: " << endl;
-        // 将选择赋给变量 choice
-        cin >> choice;
+// do ...... while 循环控制选项 1
+do {
+      // 告诉用户行程
+      cout << "\n1. 查看状态\n2.  安排行程\n3. 谈话" << endl;
+      // 叫用户选择
+      cout << "What do you do: " << endl;
+      // 将选择赋给变量 choice
+      cin >> choice;
 
-        // 判断用户的选择
-        switch (choice) {
+      // 判断用户的选择
+      switch (choice) {
 
-        // 查看状态
-        case 1:
-            // 打印日期
-            cout << '\n' << "Date: " << year << " year " << month << " month " << endl;
-          // 打印名称
-          cout << "\nname: " << name << endl;
-          // 打印金钱
-          cout << "money: " << money << endl;
-          // 打印生日
-          cout << "birthday: " << birth_year << '/' << birth_month << '/' << birth_day
-               << " age: " << year - birth_year << endl;
-          // 打印星座
-          cout << "constell: " << constell << endl;
+      // 查看状态
+      case 1:
+        // 打印日期
+        cout << '\n' << "Date: " << year << " year " << month << " month " << endl;
+        // 打印名称
+        cout << "\nname: " << name << endl;
+        // 打印金钱
+        cout << "money: " << money << endl;
+        // 打印生日
+        cout << "birthday: " << birth_year << '/' << birth_month << '/' << birth_day
+             << " age: " << year - birth_year << endl;
+        // 打印星座
+        cout << "constell: " << constell << endl;
+        // 调用函数 print 打印属性
+        print(baseinfo , baseinfo_name , sizeof(baseinfo) / sizeof(baseinfo[0]));
+        // 退出选择
+        break;
+      // 安排行程: 一个月最多三次
+      case 2:
+        // 循环选择
+        for (int i = 0; i < 3; i++) {
 
-          // 循环打印属性
-          for (int i; i < 5; i++) {
+          // 打印日期
+          cout << '\n' << "Date: " << year << " year " << month << " month " << endl;
+          // 告诉用户选择一个行程
+          cout << "1. 学习武艺 (money > 30)\n2. 上私塾\n3. 学习礼法\n4. 出城修行\n5. 打工赚钱" << endl;
+          cout << "What do you do: ";
+          // 用户输入的选择赋给变量
+          cin >> choice;
 
-            // 此语句下所有打印左对其
-            cout << left;
+          // 随机取一个值
+          srand(time(NULL));
 
-            // 打印
-            cout << baseinfo_name[i] << ": " << baseinfo[i] << endl;
-            // 计算实心方框的数量
-            int solid_count = baseinfo[i] / 100;
-            // 嵌套循环输出方框
-            for (int j = 0; j < 10; j++) {
-              // 判断是否输出实心方框
-              if (j < solid_count)
-                // 打印实心方框
-                cout << '■';
-              else
-                // 打印空心方框
-                cout << '□';
-
-            }
-
-            // 打印换行
-            cout << endl;
-
-          }
-          // 退出选择
-          break;
-        // 安排行程: 一个月最多三次
-        case 2:
-          // 循环选择
-          for (int i = 0; i < 3; i++) {
-
-            // 打印日期
-            cout << '\n' << "Date: " << year << " year " << month << " month " << endl;
-            // 告诉用户选择一个行程
-            cout << "1. 学习武艺 (money > 30)\n2. 上私塾\n3. 学习礼法\n4. 出城修行\n5. 打工赚钱" << endl;
-            cout << "What do you do: ";
-            // 用户输入的选择赋给变量
-            cin >> choice;
-
-            // 随机取一个值
-            srand(time(NULL));
+          /*
+           * 这里要判断没钱的情况
+           * 没钱就强制打工
+           */
+          if ((1 == choice) && (money >= rand() % 50)) {
 
             /*
-             * 这里要判断没钱的情况
-             * 没钱就强制打工
+             * 女主
+             * + 体力 + 魅力 - 金钱
              */
-            if ((1 == choice) && (money >= rand() % 50)) {
+            baseinfo[0] += temp1 = rand() % 10;
+            baseinfo[2] += temp2 = rand() % 10;
+            money -= temp3 = rand() % 50;
+            // 打印各属性加了多少
+            cout << "\n体力 + " << temp1 + "  魅力 + " << temp2 << "  金钱 - " << temp3 << endl;
 
-              /*
-               * 女主
-               * + 体力 + 魅力 - 金钱
-               */
-              baseinfo[0] += temp1 = rand() % 10;
-              baseinfo[2] += temp2 = rand() % 10;
-              money -= temp3 = rand() % 50;
-              // 打印各属性加了多少
-              cout << "\n体力 + " << temp1 + "  魅力 + " << temp2 << "  金钱 - " << temp3 << endl;
+          } else if (2 == choice) {
 
-            } else if (2 == choice) {
-
-              // 女主 + 魅力 + 气质
-              baseinfo[0] += temp1 = rand() % 10;
+            // 女主 + 魅力 + 气质
+            baseinfo[0] += temp1 = rand() % 10;
 
             }
 
           }
-            break;
+          break;
         }
       // 如果用户选选项 1 开始循环
       } while (choice);
@@ -562,4 +543,41 @@ int main(void) {
   cin.get();
 
   return 0;
+}
+
+/*
+ * 定义函数 (函数实现)
+ * 实现女主属性的录入和
+ * 排序功能
+ */
+void print(int value[] , string value_name[] , int len) {
+
+  // 循环打印属性
+  for (int i = 0; i < 5; i++) {
+
+    // 此语句下所有打印左对其
+    cout << left;
+
+    // 打印
+    cout << value_name[i] << ": " << value[i] << "  ";
+    // 计算实心方框的数量
+    int solid_count = value[i] / 100;
+    // 嵌套循环输出方框
+    for (int j = 0; j < 10; j++) {
+
+      // 判断是否输出实心方框
+      if (j < solid_count)
+        // 打印实心方框
+        cout << '■';
+      else
+        // 打印空心方框
+        cout << '□';
+
+    }
+
+    // 打印换行
+    cout << endl;
+
+  }
+
 }
