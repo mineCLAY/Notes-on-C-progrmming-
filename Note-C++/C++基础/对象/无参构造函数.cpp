@@ -21,7 +21,7 @@ using namespace std;
 
 /*
  * 定义类
- * TestNoArgument Constructor
+ * TestNoArgumentConstructor
  */
 class TestNoArgumentConstructor {
 
