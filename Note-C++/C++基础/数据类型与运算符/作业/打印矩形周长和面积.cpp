@@ -20,7 +20,7 @@ int main(void) {
   // 叫用户输入长和宽
   puts("Enter length and width");
   // 将用户输入的数赋给变量
-  cin >> length  , width;
+  cin >> length >> width;
 
   // 打印结果
   cout << "Perimeter: " << length * width << endl;
