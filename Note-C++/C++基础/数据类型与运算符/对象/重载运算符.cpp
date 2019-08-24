@@ -140,7 +140,11 @@ void TestInteger() {
   Integer num(525);
   Integer Int;
 
-  // 使用重载的 '+' 运算符
+  /*
+   * 使用重载的 '+' 运算符
+   * 这里编译器实际调用:
+   * Int = number.operator + (num)
+   */
   Int = number + num;
 
   // 定打印结果
