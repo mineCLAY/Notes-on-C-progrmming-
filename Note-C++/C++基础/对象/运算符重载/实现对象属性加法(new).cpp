@@ -89,6 +89,8 @@ int main(void) {
    * 返回值赋给指针变量
    */
   (*test) = *(leftValue) + (*rightValue);
+  // 编译器会解释为:
+  // (*test) = (*leftValue).operator + (*rightValue);
 
   // 调用对象成员函数
   (*test).Print();
