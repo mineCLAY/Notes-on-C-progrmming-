@@ -1,5 +1,5 @@
 /*
- * 实现负数加法 (new)
+ * 实现对象属性加法 (new)
  */
 
 #include <iostream>
