@@ -64,7 +64,7 @@ private:
 
     // 分子和分母分别除以最大公约数得到最简化分数
     (*this).molecule /= a;
-    (*this).denominator /= b;
+    (*this).denominator /= a;
 
   }
 
@@ -261,10 +261,43 @@ int main(void) {
    * 将对象成员函数
    * 返回值赋给指针变量
    */
-  (*test) = *(number) / (*rightValue);
+  (*test) = *(number) + (*rightValue);
   /*
    * 调用对象成员函数
    * 输出加法运算
+   */
+  (*test).Print();
+
+  /*
+   * 将对象成员函数
+   * 返回值赋给指针变量
+   */
+  (*test) = *(number) - (*rightValue);
+  /*
+   * 调用对象成员函数
+   * 输出减法运算
+   */
+  (*test).Print();
+
+  /*
+   * 将对象成员函数
+   * 返回值赋给指针变量
+   */
+  (*test) = *(number) * (*rightValue);
+  /*
+   * 调用对象成员函数
+   * 输出乘法运算
+   */
+  (*test).Print();
+
+  /*
+   * 将对象成员函数
+   * 返回值赋给指针变量
+   */
+  (*test) = *(number) / (*rightValue);
+  /*
+   * 调用对象成员函数
+   * 输出除法运算
    */
   (*test).Print();
 
