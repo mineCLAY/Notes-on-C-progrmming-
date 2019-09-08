@@ -229,7 +229,7 @@ public:
     } else {
 
       // 输出分数
-      cout << molecule << " / " << denominator << endl;
+      cout << "result: " << molecule << " / " << denominator << endl;
 
     }
 
@@ -254,7 +254,7 @@ int main(void) {
    * 让指针指向新建内存
    */
   Operator* test = new Operator();
-  Operator* number = new Operator(5 , 10);
+  Operator* number = new Operator(0 , 10);
   Operator* rightValue = new Operator(5 , 10);
 
   /*
