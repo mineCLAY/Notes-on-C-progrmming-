@@ -1,8 +1,14 @@
 /*
- * 虚继承 (virtual inheritance)
+ * 多继承 (multiple inheritance)
+ *
+ * 在一个需要多种特性的
+ * 类时适合使用多继承
+ *
+ * 所谓面向对象
+ * 就是把代码尽可能
+ * 抽象化
  */
 
-// 导入文件库 iostream
 #include <iostream>
 
 using namespace std;
@@ -39,9 +45,9 @@ public:
 
 /*
  * 定义类 Teacher
- * 虚继承类: Person
+ * 继承类: Person
  */
-class Teacher : virtual public Person {
+class Teacher : public Person {
 
 // 私有 (子类可以用)
 protected:
@@ -90,7 +96,7 @@ public:
  * 定义类 Student
  * 继承类: Person
  */
-class Student : virtual public Person {
+class Student : public Person {
 
 // 私有 (子类可以用)
 protected:
@@ -127,9 +133,9 @@ public:
 
 /*
  * 定义类 TeachingStudent
- * 虚继承类: Teacher , Student
+ * 继承类: Teacher , Student
  */
-class TeachingStudent : virtual public Teacher , public Student {
+class TeachingStudent : public Teacher , public Student {
 
 // 公有
 public:
@@ -137,21 +143,18 @@ public:
    * 定义构造函数
    * 调用基类构造函数
    */
-  TeachingStudent(string thisName , string classTeaching , string classAttending) :
-                  Teacher(thisName , classAttending) ,
-                  Student(thisName , classAttending) ,
-                  Person(thisName) {
+  TeachingStudent(string thisName , string classTeaching , string classAttending) : Teacher(thisName , classAttending) , Student(thisName , classAttending) {
 
     // ctor
 
   }
-
+  
   // 覆盖基类函数 Introduce
   void Introduce() {
 
     // 输出
-    cout << "You are " << (*this).name << '\n'
-         << "You are teach " << Student::classes << endl;
+    cout << "You are " << Teacher::name << '\n'
+         << "You are teach " << Teacher::classes << endl;
 
   };
 
@@ -203,6 +206,12 @@ int main(void) {
    */
   teachingStudent.Introduce();
   teachingStudent.Attending();
+
+  /*
+   * 让程序停一下
+   * 不会一闪而过
+   */
+  cin.get();
 
   return 0;
 }
