@@ -57,11 +57,11 @@ public:
   }
 
   /*
-   * 定义函数 inRange
+   * 定义函数 InRange
    * 判断阶乘结果
    * 是否错误
    */
-  bool inRange() {
+  bool InRange() {
 
     /*
      * 定义变量 max
@@ -121,7 +121,7 @@ int main(int argc , char const *argv[]) {
    * 将对象的成员函数的
    * 返回值进行判断
    */
-  if (factorial.inRange()) {
+  if (factorial.InRange()) {
 
     // 输出阶乘结果
     cout << "The factorial of " << num << " is " << factorial.GetFactorial() << endl;
