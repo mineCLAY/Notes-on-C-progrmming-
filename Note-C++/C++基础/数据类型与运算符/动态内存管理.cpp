@@ -178,5 +178,11 @@ int main(int argc , const char *argv[]) {
    */
   company = NULL;
 
+  /*
+   * 让程序停一下
+   * 不会一闪而过
+   */
+  cin.get();
+
   return 0;
 }
