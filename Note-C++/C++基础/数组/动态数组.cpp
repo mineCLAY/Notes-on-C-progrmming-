@@ -62,7 +62,7 @@ int main(int argc, char const *argv[]) {
    */
   cout << endl;
 
-  //
+  // 释放指针存储的内存
   delete[] test;
   /*
    * 将 NULL 赋给指针变量
