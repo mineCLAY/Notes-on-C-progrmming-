@@ -1,5 +1,27 @@
 /*
- * 高级类型转换
+ * 强制类型转换
+ *
+ * const_cast<MyClass *>(value)
+ * 用了改变 value 的常量性
+ *
+ * dynamic_cast<MyClass *>(value)
+ * 如果 value 不是
+ * MyClass 类型
+ * (或者不是 MyClass 的子类) 指针
+ * 这个操作符将返回 NULL
+ *
+ * reinterpret_cast<T>(value)
+ * 在不进行任何实质性的赚的情况下
+ * 把一种类型的指针
+ * 解释为另一种类型
+ * 指针或者把一种整数
+ * 解释为另一种整数
+ *
+ * static_cast<T>(value)
+ * 用来进行强制类型转换而
+ * 不做任何运行时检查
+ * 老式强制类型转换
+ * 操作的替代品
  */
 
 // 导入函数库 iostream
@@ -23,14 +45,17 @@ class Company {
 protected:
   // 定义存储公司名字的变量
   string name;
+  // 定义存储产品的变量
+  string product;
 
 // 公有
 public:
   // 定义构造函数
-  Company(string name) {
+  Company(string name , string product) {
 
     // 给相应变量赋值
     (*this).name = name;
+    (*this).product = product;
 
   }
 
@@ -45,7 +70,7 @@ public:
 
   }
 
-  // 定义虚析构函数
+  // 定义析构函数
   virtual ~Company() {
 
     // dtor
@@ -62,20 +87,15 @@ public:
  */
 class TechCompany : public Company {
 
-private:
-  // 定义存储产品的变量
-  string product;
-
 public:
   /*
    * 定义构造函数
    * 并调用基类函数
    * 给变量 name 赋值
    */
-  TechCompany(string thisName , string product) : Company(thisName) {
+  TechCompany(string thisName , string thisProduct) : Company(thisName , thisProduct) {
 
-    // 给相应变量赋值
-    (*this).product = product;
+    // ctor
 
   }
 
@@ -87,7 +107,7 @@ public:
 
   }
 
-  // 定义虚析构函数
+  // 定义析构函数
   virtual ~TechCompany() {
 
     // dtor
@@ -107,7 +127,7 @@ int main(int argc , const char *argv[]) {
    * 指针变量
    * 让指针指向新建内存
    */
-  Company *company = new TechCompany("MineWorld" , "MineProduct");
+  Company *company = new Company("MineWorld" , "MineProduct");
 
   /*
    * 这段代码错误
@@ -125,10 +145,16 @@ int main(int argc , const char *argv[]) {
   // 此时需要使用强制类型转换
   // TechCompany *techCompany = (TechCompany *)company;
 
-  // 高级强制类型转换
+  /*
+   * 高级强制类型转换
+   * 如果 company 不是
+   * TechCompany 类型
+   * (或者不是 TechCompany 的子类)
+   * 这个操作符将返回 NULL
+   */
   TechCompany *techCompany = dynamic_cast<TechCompany *>(company);
 
-  // 判断是否成功
+  // 判断是否成功转换
   if (NULL != techCompany) {
 
     // 输出
@@ -136,17 +162,31 @@ int main(int argc , const char *argv[]) {
 
   } else {
 
-    //
+    // 输出
     cout << "failure" << '\n';
 
   }
 
   // 调用对象的成员函数
-  techCompany -> Print();
+  // techCompany -> Print();
 
   // 释放指针指向的内存
   delete company;
-  delete techCompany;
+  /*
+   * 只需要释放 company
+   * 指向的内存即可
+   * 因为 company 将它
+   * 指向的内存赋值给
+   * 指针变量 techCompany
+   * 那么两个指针变量
+   * 都指向同一个内存 (地址)
+   * 所以如果释放两个指针变量
+   * 指向的内存
+   * 那么就会重复释放
+   * 则会错误 (终止程序执行)
+   */
+  // delete techCompany;
+
   /*
    * 将 NULL 赋给指针变量
    * 让它不为野指针
