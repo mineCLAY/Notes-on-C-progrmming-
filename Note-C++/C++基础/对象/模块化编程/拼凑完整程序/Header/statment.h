@@ -4,6 +4,30 @@
  * 实现声明函数
  */
 
+/*
+ * main.cpp 和 definition.cpp
+ * 都包含了 statment.h 头文件
+ * 这意味着 Operator
+ * 类被声明了两次
+ * 这显然没有必要
+ * 如果它是一个结构
+ * 声明两次还将
+ * 导致编译器报错
+ * 所以可以使用
+ * 预处理语句解决
+ */
+
+/*
+ * 如果没有
+ * 定义 STATMENT_H
+ * 那么就执行 endif
+ * 之前代码
+ */
+#ifndef STATMENT_H
+
+// 定义常量标识符 STATMENT_H
+#define STATMENT_H
+
 // 定义类 Operator
 class Operator {
 
@@ -42,3 +66,9 @@ public:
   ~Operator();
 
 };
+
+/*
+ * 结束 #ifndef STATMENT_H
+ * 和 endif 中的代码
+ */
+#endif
