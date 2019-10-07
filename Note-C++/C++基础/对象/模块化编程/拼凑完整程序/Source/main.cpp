@@ -1,5 +1,5 @@
 /*
- *
+ * 实现有理数的四则运算
  */
 
 #include <iostream>
