@@ -3,7 +3,11 @@
  */
 
 #include <iostream>
-
+/*
+ * 因为要使用 NULL
+ * 所以导入函数库 stdlib
+ */
+#include <cstdlib>
 /*
  * 导入自己创建的
  * 头文件 statment
