@@ -36,7 +36,7 @@ int main(int argc , char const *argv[]) {
    * 运行两次循环体
    * for 中的代码
    */
-  for (int i = 0; i < name.size(); i++) {
+  for (unsigned int i = 0; i < name.size(); i++) {
 
     // 输出向量变量存储的名字
     cout << "name[" << i << "]: " << name[i] << '\n';
