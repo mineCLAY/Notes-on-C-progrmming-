@@ -75,7 +75,12 @@ int main(int argc , char const *argv[]) {
   // 输出交换后两个变量的数据
   cout << "After exchange:" << '\n'
        << "str: " << str << '\n'
-       << "s: " << s << '\n' << '\n';
+       << "s: " << s << '\n' << endl;
+
+  /*
+   * 让程序停一下不会一闪而过
+   */
+  cin.get();
 
   return 0;
 }
