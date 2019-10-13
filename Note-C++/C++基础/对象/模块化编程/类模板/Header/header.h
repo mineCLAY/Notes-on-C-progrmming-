@@ -33,10 +33,10 @@ public:
   Stack(unsigned int size = 100);
 
   // 声明函数 Push
-  void Push(Type);
+  void Push(Type) throw (const char *);
 
   // 声明函数 Popup
-  Type Popup();
+  Type Popup() throw (const char *);
 
   // 声明析构函数
   ~Stack();
@@ -64,13 +64,26 @@ Stack<Type>::Stack(unsigned int size) {
  * 实现压入数据
  */
 template <class Type>
-void Stack<Type>::Push(Type value) {
+void Stack<Type>::Push(Type value) throw (const char *) {
 
   /*
-   * 先存储数据
-   * 然后数据顶部数据位置自加 1
+   * 判断存储顶部位置的变量
+   * 是否已经超出栈的范围 (size)
    */
-  data[position++] = value;
+  if (size < position) {
+
+    // 抛出异常
+    throw "Out of range";
+
+  } else {
+
+    /*
+     * 先存储数据
+     * 然后数据顶部数据位置自加 1
+     */
+    data[position++] = value;
+
+  }
 
 }
 
@@ -79,18 +92,30 @@ void Stack<Type>::Push(Type value) {
  * 实现弹出数据
  */
 template <class Type>
-Type Stack<Type>::Popup() {
+Type Stack<Type>::Popup() throw (const char *) {
 
   /*
-   * 先让顶部数据的位置自减 1
-   * 因为栈中顶部位置的指针
-   * 是先指向下一个数据
-   * 此时这个位置是空的
-   * 然后数据再压入
-   * 那么这个指针应该先指向前面一个数据
-   * 然后返回需要弹出的数据
+   * 判断是否已经超出栈底
    */
-  return data[--position];
+  if (0 == position) {
+
+    // 抛出异常
+    throw "Beyond the bottom of the stack";
+
+  } else {
+
+    /*
+     * 先让顶部数据的位置自减 1
+     * 因为栈中顶部位置的指针
+     * 是先指向下一个数据
+     * 此时这个位置是空的
+     * 然后数据再压入
+     * 那么这个指针应该先指向前面一个数据
+     * 然后返回需要弹出的数据
+     */
+    return data[--position];
+
+  }
 
 }
 
