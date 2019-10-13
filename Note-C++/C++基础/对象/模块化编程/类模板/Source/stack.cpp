@@ -41,5 +41,11 @@ int main(int argc, char const *argv[]) {
   cout << "data[1]: " << intStack.Popup() << '\n';
   cout << "data[0]: " << intStack.Popup() << endl;
 
+  /*
+   * 让程序停一下
+   * 不会一闪而过
+   */
+  cin.get();
+
   return 0;
 }
