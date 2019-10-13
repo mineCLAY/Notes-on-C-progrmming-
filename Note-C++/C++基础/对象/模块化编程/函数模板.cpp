@@ -1,5 +1,5 @@
 /*
- * 模板 (templeta)
+ * 函数模板 (FunctionTempleta)
  * 实现两个变量数据交换
  */
 
