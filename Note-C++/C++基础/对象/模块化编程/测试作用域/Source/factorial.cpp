@@ -44,5 +44,10 @@ int main(int argc , char const *argv[]) {
 
   }
 
+  /*
+   * 让程序停一下
+   * 不会一闪而过
+   */
+
   return 0;
 }
