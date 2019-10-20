@@ -12,12 +12,14 @@ using namespace std;
  */
 class FourOperator {
 
+// 私有
 private:
   // 声明存储复数实部的变量
   double real;
   // 声明存储复数虚部的变量
   double imag;
 
+// 私有
 public:
   /*
    * 声明构造函数
