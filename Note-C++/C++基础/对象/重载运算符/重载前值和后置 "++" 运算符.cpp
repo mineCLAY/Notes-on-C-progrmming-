@@ -21,6 +21,7 @@ using namespace std;
  */
 class Clock {
 
+// 私有
 private:
   // 声明存储小时的变量
   int hour;
@@ -29,6 +30,7 @@ private:
   // 声明存储秒钟的变量
   int second;
 
+// 公有
 public:
   /*
    * 声明构造函数
