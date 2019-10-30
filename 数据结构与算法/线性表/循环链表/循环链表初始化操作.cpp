@@ -7,6 +7,8 @@
 #include <iostream>
 #include <stdlib.h>
 
+using namespace std;
+
 /*
  * 定义实现初始化
  * 循环链表的函数
