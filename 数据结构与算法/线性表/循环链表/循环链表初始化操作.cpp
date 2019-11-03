@@ -88,12 +88,9 @@ void CircularListInit(node **pNode) {
 
     } else {
 
-      /*
-       * 循环找到 next 指向
-       * 第一个结点的结点
-       */
+      // 查找最后一个结点
       for (target = (*pNode); target -> next != (*pNode); target = target -> next)
-      ;
+        ;
 
       // 生成一个新结点 (分配内存)
       temp = (node *) malloc (sizeof(struct CircularLinkList));
