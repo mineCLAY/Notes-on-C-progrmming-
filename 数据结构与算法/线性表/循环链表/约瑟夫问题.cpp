@@ -87,7 +87,7 @@ void KillList(int n) {
     cout << "The index of kill: " << peugeot -> suicideOrder << '(' << i << ')' << '\n';
 
     // 删除头结点 (自杀)
-    if (p == head -> next) {
+    if (peugeot == head -> next) {
 
       // 让 t 找到最后一个结点
       for (; t -> next != head -> next; )
