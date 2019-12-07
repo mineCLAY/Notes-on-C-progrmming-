@@ -125,7 +125,7 @@ int main(int argc, char const *argv[]) {
   intTwo.PutElem(666);
 
   // 输出两个对象的数据
-  cout << intOne.GetElem() << ' ' << intTwo.GetElem();
+  cout << intOne.GetElem() << ' ' << intTwo.GetElem() << endl;
 
   // 定义结构体变量
   Student temp = { 233 };
