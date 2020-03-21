@@ -30,6 +30,7 @@ int main(int argc, char const *argv[]) {
       // 将字母转换为小写
       c = tolower(c);
       // 将该字母的出现频率加一;
+      test[c]++;
 
     }
 
