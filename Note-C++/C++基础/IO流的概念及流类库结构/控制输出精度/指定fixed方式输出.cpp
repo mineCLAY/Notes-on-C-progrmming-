@@ -15,7 +15,7 @@ int main(int argc, char const *argv[]) {
   std::string names[] = { "Room" , "Bai YangQian" , "LOL" , "WangZheRongYao" };
 
   // 指定 fixed (固定) 输出
-  std::cout << setiosflags(std::ios_base::left);
+  std::cout << setiosflags(std::ios_base::fixed);
 
   // 输出数据
   for (int i = 0; i < 4; i++) {
@@ -23,7 +23,7 @@ int main(int argc, char const *argv[]) {
     std::cout << setiosflags(std::ios_base::left) //设置左对齐
               << std::setw(6) << names[i] // 设置宽度为 6
               << resetiosflags(std::ios_base::left) // 清除左对齐设置
-              << std::setw(10) << std::setprecision(1) << values[i] << std::endl; // 设置有效数位为 1
+              << std::setw(10) << std::setprecision(1) << values[i] << std::endl; // 设置小数位为 1
 
   }
 
