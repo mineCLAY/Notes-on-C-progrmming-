@@ -15,7 +15,7 @@ int main(int argc, char const *argv[]) {
   int values[] = { 0 , 1 , 2 , 3 , 4 , 5 , 666 };
 
   // 创建文件输出流对象
-  std::ofstream os("payroll" , /* 可以不写 */ std::ios_base::out | std::ios_base::binary);
+  std::ofstream os("integers" , /* 可以不写 */ std::ios_base::out | std::ios_base::binary);
 
   // 写入数据
   os.write( /* 转换结构体为字符类型的指针 */ reinterpret_cast <char *> (values) , sizeof(values));
@@ -24,7 +24,7 @@ int main(int argc, char const *argv[]) {
   os.close();
 
   // 创建文件输入流对象
-  std::ifstream is("payroll" , /* 可以不写 */ std::ios_base::in | std::ios_base::binary);
+  std::ifstream is("integers" , /* 可以不写 */ std::ios_base::in | std::ios_base::binary);
 
   // 判断是否打开
   if (is) {
@@ -38,12 +38,12 @@ int main(int argc, char const *argv[]) {
     is.read( /* 转换结构体为字符类型的指针 */ reinterpret_cast <char *> (&result) , sizeof(int));
 
     // 输出结果
-    std::cout << "The 4th integer in the file 'payroll': " << result << std::endl;
+    std::cout << "The 4th integer in the file 'integers': " << result << std::endl;
 
   } else {
 
     // 输出错误信息
-    std::cout << "ERROR: Cannot open file 'payroll'" << std::endl;
+    std::cout << "ERROR: Cannot open file 'integers'" << std::endl;
 
   }
 
