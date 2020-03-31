@@ -47,8 +47,8 @@ int main(int argc, char const *argv[]) {
 
   } else {
 
-  // 输出错误信息
-  std::cout << "ERROR: Cannot open file 'payroll'" << std::endl;
+    // 输出错误信息
+    std::cout << "ERROR: Cannot open file 'payroll'" << std::endl;
 
   }
 
