@@ -16,7 +16,7 @@ std::ofstream F("output.out");
  * 文件 "output.out"
  * 并且执行语句 "t"
  */
-#define D(t) std::cout << #t << std::endl; t
+#define D(t) F << #t << std::endl; t
 
 // 程序入口
 int main(int argc, char const *argv[]) {
